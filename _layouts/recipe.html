@@ -48,7 +48,7 @@ layout: default
       <ul itemprop="ingredients">
         <!-- list ingredients that make up recipe -->
         {% for ingredient in page.ingredients %}
-        <li itemprop="recipeIngredient">{{ ingredient | markdownify }}</li>
+        <li itemprop="recipeIngredient" class="checkable">{{ ingredient | markdownify }}</li>
         {% endfor %}
       </ul>
       {% endif %}
@@ -58,14 +58,14 @@ layout: default
       <h4 class="blue mt0 mb2 xs-center">Zubereitung</h4>
       <ul itemprop="recipeInstructions">
         {% for direction in page.directions %}
-        <li>{{ direction | markdownify }}</li>
+        <li class="checkable">{{ direction | markdownify }}</li>
         {% endfor %}
       </ul>
     </div>
 
     <div class="sm-col sm-col-6 lg-col-6">
       <h4 class="blue mt0 mb2 xs-center">Anmerkungen</h4>
-      <ul itemprop="recipeInstructions">
+      <ul>
         {% for direction in page.notes %}
         <li>{{ direction | markdownify }}</li>
         {% endfor %}
@@ -102,16 +102,23 @@ layout: default
         {% endif %}
       {% endfor %}
 
-      <h4 class="blue regular xs-center">Ingredients</h4>
+      <h4 class="blue regular xs-center">Zutaten</h4>
         <ul class="ingredients" itemprop="ingredients">
         {% for item in recipe.ingredients %}
-        <li itemprop="ingredient">{{ item | markdownify }}</li>
+        <li itemprop="ingredient" class="checkable">{{ item | markdownify }}</li>
         {% endfor %}
       </ul>
 
-      <h4 class="blue regular xs-center">Steps</h4>
+      <h4 class="blue regular xs-center">Zubereitung</h4>
         <ul itemprop="instructions">
         {% for item in recipe.directions %}
+        <li class="checkable">{{ item | markdownify }}</li>
+        {% endfor %}
+      </ul>
+
+      <h4 class="blue regular xs-center">Anmerkungen</h4>
+        <ul itemprop="instructions">
+        {% for item in recipe.notes %}
         <li>{{ item | markdownify }}</li>
         {% endfor %}
       </ul>
@@ -133,15 +140,15 @@ layout: default
 
 </div>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   $( document ).ready(function() {
   jQuery.fn.clickToggle = function(a,b) {
   var ab=[b,a];
   function cb(){ ab[this._tog^=1].call(this); }
   return this.on("click", cb);
   };
-  $("ul li").append('<input type="checkbox">');
-  $("ul li").clickToggle(function(){
+  $("ul li.checkable").append('<input class="checkbox" type="checkbox">');
+  $("ul li.checkable").clickToggle(function(){
     $(this).children("input").prop('checked', true);
     var height = $(this).height();
     var y = $(window).scrollTop();
@@ -154,4 +161,4 @@ layout: default
   });
   });
 
-</script>
+</script> -->
