@@ -4,7 +4,7 @@ layout: recipe
 title:  "Baba Ganoush"
 #image: roasted-brussels-sprouts.jpg
 tags: aufstrich, vegan, knoblauch
-permalink: /recipes/baba-ganoush
+permalink: /recipes/babaganoush
 
 ingredients:
 - 12 Auberginen[^1]
@@ -28,8 +28,8 @@ directions:
 notes:
 - [^1]: Für Baba Ganoush sind männliche Auberginen besser geeignet, da sie
   wengiger Samen enthalten.  Männliche Auberginen lassen sich dadurch erkennen,
-dass die Narbe an der Spitze der Frucht rund ist.  Bei weiblichen Auberginen
-ist diese Narbe länglich.
+  dass die Narbe an der Spitze der Frucht rund ist.  Bei weiblichen Auberginen
+  ist diese Narbe länglich.
 
 ---
 
